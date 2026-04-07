@@ -1,88 +1,171 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoreline | Better Boards. Better Bites.</title>
-    <style>
-        :root {
-            --primary: #3d2b1f; /* Dark wood brown */
-            --accent: #d4a373;  /* Warm natural oak */
-            --bg: #fdfaf7;      /* Soft parchment white */
-            --text: #2d2d2d;
-        }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; }
-        
-        /* Navigation */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; color: var(--primary); }
 
-        /* Hero Section */
-        .hero { 
-            text-align: center; 
-            padding: 100px 10%; 
-            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com');
-            background-size: cover;
-            background-position: center;
-        }
-        .hero h1 { font-size: 3.5rem; color: var(--primary); margin-bottom: 10px; }
-        .hero p { font-size: 1.4rem; color: #555; margin-bottom: 30px; }
-        .cta-btn { background: var(--primary); color: white; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
-        .cta-btn:hover { background: var(--accent); }
+   <meta charset="UTF-8">
 
-        /* Industry Highlights */
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 10%; text-align: center; }
-        .feature-card { background: white; padding: 40px; border-radius: 12px; border-bottom: 4px solid var(--accent); }
-        .feature-card h3 { color: var(--primary); margin-top: 0; }
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Trend Focus */
-        .trend-banner { background: var(--primary); color: white; padding: 60px 10%; text-align: center; }
-        .trend-banner h2 { color: var(--accent); }
-        
-        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #888; }
-    </style>
+   <title>Shoreline | Better Boards. Better Bites.</title>
+
+   <style>
+
+       :root {
+
+           --primary: #3d2b1f; /* Dark wood brown */
+
+           --accent: #386890;  /* Steel Blue */
+
+           --bg: #d4a373;      /* Warm natural oak */
+
+           --text: #2d2d2d;
+
+       }
+
+       body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+
+      
+
+       /* Navigation */
+
+       nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+       .logo { <img src="blob:chrome-untrusted://media-app/d7d58dd2-eb9a-49f4-922e-3433088ced12" alt="shoreline-logo.png.png"/>font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; color: var(--primary); }
+
+
+
+       /* Hero Section */
+
+       .hero {
+
+           text-align: center;
+
+           padding: 100px 10%;
+
+           background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com');
+
+           background-size: cover;
+
+           background-position: center;
+
+       }
+
+       .hero h1 { font-size: 3.5rem; color: var(--primary); margin-bottom: 10px; }
+
+       .hero p { font-size: 1.4rem; color: #555; margin-bottom: 30px; }
+
+       .cta-btn { background: var(--primary); color: white; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+
+       .cta-btn:hover { background: var(--accent); }
+
+
+
+       /* Industry Highlights */
+
+       .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 10%; text-align: center; }
+
+       .feature-card { background: white; padding: 40px; border-radius: 12px; border-bottom: 4px solid var(--accent); }
+
+       .feature-card h3 { color: var(--primary); margin-top: 0; }
+
+
+
+       /* Trend Focus */
+
+       .trend-banner { background: var(--primary); color: white; padding: 60px 10%; text-align: center; }
+
+       .trend-banner h2 { color: var(--accent); }
+
+      
+
+       footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #888; }
+
+   </style>
+
 </head>
+
 <body>
 
-    <nav>
-        <div class="logo">SHORELINE</div>
-        <div>
-            <a href="#" style="margin-left:20px; text-decoration:none; color:var(--text);">Shop</a>
-            <a href="#" style="margin-left:20px; text-decoration:none; color:var(--text);">Our Quality</a>
-        </div>
-    </nav>
 
-    <header class="hero">
-        <h1>Better Boards. Better Bites.</h1>
-        <p>Hand-finished, superior quality tools for the modern home chef.</p>
-        <a href="#" class="cta-btn">View Collection</a>
-    </header>
 
-    <section class="features">
-        <div class="feature-card">
-            <h3>Superior Quality</h3>
-            <p>We provide essential tools with a commitment to durability and hand-finished precision.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Direct-to-Home</h3>
-            <p>Leveraging a $13B digital marketplace to bring premium kitchenware directly to your door.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Data-Driven Curation</h3>
-            <p>We curate our product mix based on consumer needs to ensure every tool has a purpose.</p>
-        </div>
-    </section>
+   <nav>
 
-    <section class="trend-banner">
-        <h2>Pioneering the Non-Toxic Kitchen</h2>
-        <p>In 2026, health is our priority. We are leading the industry shift toward <strong>PFAS-free cookware</strong>, specializing in high-performance stainless steel and ceramic alternatives.</p>
-    </section>
+       <div class="logo">image.png</div>
 
-    <footer>
-        &copy; 2026 Shoreline Kitchenware Sales. Hand-finished for your home.
-    </footer>
+       <div>
+
+           <a href="#" style="margin-left:20px; text-decoration:none; color:var(--text);">Shop</a>
+
+           <a href="#" style="margin-left:20px; text-decoration:none; color:var(--text);">Our Quality</a>
+
+       </div>
+
+   </nav>
+
+
+
+   <header class="hero">
+
+       <h1>Better Boards. Better Bites.</h1>
+
+       <p>Hand-finished, superior quality boards for the modern home chef.</p>
+
+       <a href="#" class="cta-btn">View Collection</a>
+
+   </header>
+
+
+
+   <section class="features">
+
+       <div class="feature-card">
+
+           <h3>Superior Quality</h3>
+
+           <p>We provide a charcuterie and cutting board mix with a commitment to durability and hand-finished precision.</p>
+
+       </div>
+
+       <div class="feature-card">
+
+           <h3>Direct-to-Home</h3>
+
+           <p>Leveraging a $1.2B digital marketplace to bring premium kitchenware directly to your door.</p>
+
+       </div>
+
+       <div class="feature-card">
+
+           <h3>Data-Driven Curation</h3>
+
+           <p>We create our product based on consumer needs to ensure every board is made to last and pleasing to the eye.</p>
+
+       </div>
+
+   </section>
+
+
+
+   <section class="trend-banner">
+
+       <h2>Pioneering the Non-Toxic Kitchen</h2>
+
+       <p>In 2026, health is our priority. We are following the industry shift toward <strong>PFAS-free cutting boards</strong>, specializing in high-performance food-safe resin and wood charcuterie and cutting boards .</p>
+
+   </section>
+
+
+
+   <footer>
+
+       &copy; 2026 Shoreline Kitchenware Sales. Hand-finished for your home.
+
+   </footer>
+
+
 
 </body>
+
 </html>
-
-
