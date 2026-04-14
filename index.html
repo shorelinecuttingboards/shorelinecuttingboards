@@ -1,287 +1,275 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoreline | Better Boards. Better Bites.</title>
+  <style>
+    :root {
+      --primary: #3d2b1f;
+      --accent: #386890;
+      --bg: #d4a373;
+      --text: #2d2d2d;
+    }
 
-   <meta charset="UTF-8">
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
 
-   <title>Shoreline | Better Boards. Better Bites.</title>
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      color: var(--primary);
+      text-decoration: none;
+    }
 
-   <style>
+    .logo svg {
+      height: 50px;
+      width: auto;
+      margin-right: 10px;
+    }
 
-       :root {
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-           --primary: #3d2b1f; /* Dark wood brown */
+    .nav-links a:hover {
+      color: var(--accent);
+    }
 
-           --accent: #386890;  /* Steel Blue */
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 10%;
+      background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                  linear-gradient(135deg, var(--bg), #c9956b);
+      background-size: cover;
+      background-position: center;
+    }
 
-           --bg: #d4a373;      /* Warm natural oak */
+    .hero h1 {
+      font-size: 3.5rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
 
-           --text: #2d2d2d;
+    .hero p {
+      font-size: 1.4rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
 
-       }
+    .cta-btn {
+      background: var(--primary);
+      color: white;
+      padding: 15px 40px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+    }
 
-       body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    .cta-btn:hover {
+      background: var(--accent);
+    }
 
-      
+    /* Feature Cards */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 10%;
+      text-align: center;
+    }
 
-       /* Navigation */
+    .feature-card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      border-bottom: 4px solid var(--accent);
+    }
 
-       nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .feature-card h3 {
+      color: var(--primary);
+      margin-top: 0;
+    }
 
-       .logo { <img src="blob:chrome-untrusted://media-app/d7d58dd2-eb9a-49f4-922e-3433088ced12" alt="shoreline-logo.png.png"/>font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; color: var(--primary); }
+    /* Trend Banner */
+    .trend-banner {
+      background: var(--primary);
+      color: white;
+      padding: 60px 10%;
+      text-align: center;
+    }
 
+    .trend-banner h2 {
+      color: var(--accent);
+    }
 
+    /* Buy Now / Venmo Section */
+    .buy-now {
+      text-align: center;
+      padding: 80px 10%;
+      background: #fff;
+    }
 
-       /* Hero Section */
+    .buy-now h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
 
-       .hero {
+    .buy-now p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-           text-align: center;
+    .venmo-qr {
+      display: inline-block;
+      background: #f9f9f9;
+      border: 2px dashed var(--accent);
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 320px;
+    }
 
-           padding: 100px 10%;
+    .venmo-qr img {
+      max-width: 240px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
 
-           background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com');
+    .venmo-qr .placeholder {
+      width: 240px;
+      height: 240px;
+      background: #eee;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 0.95rem;
+      margin: 0 auto;
+    }
 
-           background-size: cover;
+    .venmo-qr p {
+      margin-top: 15px;
+      font-weight: bold;
+      color: var(--primary);
+      font-size: 1rem;
+    }
 
-           background-position: center;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 0.9rem;
+      color: #888;
+    }
 
-       }
-
-       .hero h1 { font-size: 3.5rem; color: var(--primary); margin-bottom: 10px; }
-
-       .hero p { font-size: 1.4rem; color: #555; margin-bottom: 30px; }
-
-       .cta-btn { background: var(--primary); color: white; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
-
-       .cta-btn:hover { background: var(--accent); }
-
-
-
-       /* Industry Highlights */
-
-       .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 10%; text-align: center; }
-
-       .feature-card { background: white; padding: 40px; border-radius: 12px; border-bottom: 4px solid var(--accent); }
-
-       .feature-card h3 { color: var(--primary); margin-top: 0; }
-
-
-
-       /* Trend Focus */
-
-       .trend-banner { background: var(--primary); color: white; padding: 60px 10%; text-align: center; }
-
-       .trend-banner h2 { color: var(--accent); }
-
-      
-
-       footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #888; }
-
-   </style>
-
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1.1rem; }
+      .buy-now h2 { font-size: 1.8rem; }
+      .logo svg { height: 36px; }
+    }
+  </style>
 </head>
-
 <body>
 
-
-
-   <nav>
-
-       <div class="logo"><!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<title>Shoreline Logo</title>
-
-<style>
-
-  body {
-
-    background: #e9e9e9;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    height: 100vh;
-
-  }
-
-</style>
-
-</head>
-
-<body>
-
-
-
-<svg width="300" height="300" viewBox="0 0 300 300">
-
-  
-
-  <!-- Left circular wood pattern (simplified rings) -->
-
-  <defs>
-
-    <pattern id="rings" width="10" height="10" patternUnits="userSpaceOnUse">
-
-      <circle cx="5" cy="5" r="4" fill="none" stroke="#6b4a2b" stroke-width="1"/>
-
-    </pattern>
-
-  </defs>
-
-
-
-  <circle cx="140" cy="150" r="100" fill="url(#rings)" />
-
-
-
-  <!-- Right D shape -->
-
-  <path d="M140,50 
-
-           L200,50 
-
-           Q260,50 260,110 
-
-           L260,190 
-
-           Q260,250 200,250 
-
-           L140,250 Z"
-
-        fill="none"
-
-        stroke="#1a1a1a"
-
-        stroke-width="3"/>
-
-
-
-  <!-- Center horizontal divider lines -->
-
-  <line x1="100" y1="150" x2="260" y2="150" stroke="#6b4a2b" stroke-width="3"/>
-
-  <line x1="100" y1="165" x2="260" y2="165" stroke="#6b4a2b" stroke-width="3"/>
-
-
-
-  <!-- Text -->
-
-  <text x="150" y="145" 
-
-        text-anchor="middle" 
-
-        font-family="Arial, sans-serif" 
-
-        font-size="28" 
-
-        fill="#111" 
-
-        font-weight="600"
-
-        letter-spacing="2">
-
-    SHORELINE
-
-  </text>
-
-
-
-</svg>
-
-
+  <nav>
+    <a href="#" class="logo">
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="rings" width="10" height="10" patternUnits="userSpaceOnUse">
+            <circle cx="5" cy="5" r="4" fill="none" stroke="#6b4a2b" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <circle cx="140" cy="150" r="100" fill="url(#rings)" />
+        <path d="M140,50 L200,50 Q260,50 260,110 L260,190 Q260,250 200,250 L140,250 Z"
+              fill="none" stroke="#1a1a1a" stroke-width="3"/>
+        <line x1="100" y1="150" x2="260" y2="150" stroke="#6b4a2b" stroke-width="3"/>
+        <line x1="100" y1="165" x2="260" y2="165" stroke="#6b4a2b" stroke-width="3"/>
+        <text x="150" y="145" text-anchor="middle" font-family="Arial, sans-serif"
+              font-size="28" fill="#111" font-weight="600" letter-spacing="2">SHORELINE</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="#">Shop</a>
+      <a href="#quality">Our Quality</a>
+      <a href="#buy">Buy Now</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Better Boards. Better Bites.</h1>
+    <p>Hand-finished, superior quality boards for the modern home chef.</p>
+    <a href="#buy" class="cta-btn">Buy Now</a>
+  </header>
+
+  <section id="quality" class="features">
+    <div class="feature-card">
+      <h3>Superior Quality</h3>
+      <p>We provide a charcuterie and cutting board mix with a commitment to durability and hand-finished precision.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Direct-to-Home</h3>
+      <p>Leveraging a $1.2B digital marketplace to bring premium kitchenware directly to your door.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Data-Driven Curation</h3>
+      <p>We create our product based on consumer needs to ensure every board is made to last and pleasing to the eye.</p>
+    </div>
+  </section>
+
+  <section class="trend-banner">
+    <h2>Pioneering the Non-Toxic Kitchen</h2>
+    <p>In 2026, health is our priority. We are following the industry shift toward <strong>PFAS-free cutting boards</strong>, specializing in high-performance food-safe resin and wood charcuterie and cutting boards.</p>
+  </section>
+
+  <section id="buy" class="buy-now">
+    <h2>Order Your Board</h2>
+    <p>Pay via Venmo to place your order. Include your board selection and shipping details in the payment note and we'll get it shipped out.</p>
+    <div class="venmo-qr">
+      <img src="venmo-qr.png" alt="Scan to pay with Venmo">
+      <p>Pay with Venmo</p>
+    </div>
+    <a href="https://venmo.com/u/Eli-Belits" target="_blank" rel="noopener" class="cta-btn" style="margin-top: 25px;">Pay on Venmo</a>
+  </section>
+
+  <footer>
+    &copy; 2026 Shoreline Kitchenware Sales. Hand-finished for your home.
+  </footer>
 
 </body>
-
-</html>
-
-</div>
-
-       <div>
-
-           <a href="#" style="margin-left:20px; text-decoration:none; color:var(--text);">Shop</a>
-
-           <a href="#" style="margin-left:20px; text-decoration:none; color:var(--text);">Our Quality</a>
-
-       </div>
-
-   </nav>
-
-
-
-   <header class="hero">
-
-       <h1>Better Boards. Better Bites.</h1>
-
-       <p>Hand-finished, superior quality boards for the modern home chef.</p>
-
-       <a href="#" class="cta-btn">View Collection</a>
-
-   </header>
-
-
-
-   <section class="features">
-
-       <div class="feature-card">
-
-           <h3>Superior Quality</h3>
-
-           <p>We provide a charcuterie and cutting board mix with a commitment to durability and hand-finished precision.</p>
-
-       </div>
-
-       <div class="feature-card">
-
-           <h3>Direct-to-Home</h3>
-
-           <p>Leveraging a $1.2B digital marketplace to bring premium kitchenware directly to your door.</p>
-
-       </div>
-
-       <div class="feature-card">
-
-           <h3>Data-Driven Curation</h3>
-
-           <p>We create our product based on consumer needs to ensure every board is made to last and pleasing to the eye.</p>
-
-       </div>
-
-   </section>
-
-
-
-   <section class="trend-banner">
-
-       <h2>Pioneering the Non-Toxic Kitchen</h2>
-
-       <p>In 2026, health is our priority. We are following the industry shift toward <strong>PFAS-free cutting boards</strong>, specializing in high-performance food-safe resin and wood charcuterie and cutting boards .</p>
-
-   </section>
-
-
-
-   <footer>
-
-       &copy; 2026 Shoreline Kitchenware Sales. Hand-finished for your home.
-
-   </footer>
-
-
-
-</body>
-
 </html>
