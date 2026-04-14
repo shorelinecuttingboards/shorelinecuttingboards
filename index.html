@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shoreline | Better Boards. Better Bites.</title>
+  <title>Shoreline | Order Your Board</title>
   <style>
     :root {
       --primary: #3d2b1f;
@@ -58,26 +58,56 @@
       color: var(--accent);
     }
 
-    /* Hero Section */
-    .hero {
+    /* Order Hero */
+    .order-hero {
       text-align: center;
-      padding: 100px 10%;
-      background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-                  linear-gradient(135deg, var(--bg), #c9956b);
-      background-size: cover;
-      background-position: center;
+      padding: 80px 10%;
+      background: #fff;
     }
 
-    .hero h1 {
-      font-size: 3.5rem;
+    .order-hero h1 {
+      font-size: 3rem;
       color: var(--primary);
       margin-bottom: 10px;
     }
 
-    .hero p {
-      font-size: 1.4rem;
+    .order-hero .tagline {
+      font-size: 1.3rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .order-hero .instructions {
+      font-size: 1.1rem;
       color: #555;
       margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .venmo-qr {
+      display: inline-block;
+      background: #f9f9f9;
+      border: 2px dashed var(--accent);
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 320px;
+    }
+
+    .venmo-qr img {
+      max-width: 240px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .venmo-qr p {
+      margin-top: 15px;
+      font-weight: bold;
+      color: var(--primary);
+      font-size: 1rem;
     }
 
     .cta-btn {
@@ -128,66 +158,6 @@
       color: var(--accent);
     }
 
-    /* Buy Now / Venmo Section */
-    .buy-now {
-      text-align: center;
-      padding: 80px 10%;
-      background: #fff;
-    }
-
-    .buy-now h2 {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-
-    .buy-now p {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 30px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .venmo-qr {
-      display: inline-block;
-      background: #f9f9f9;
-      border: 2px dashed var(--accent);
-      border-radius: 16px;
-      padding: 40px;
-      max-width: 320px;
-    }
-
-    .venmo-qr img {
-      max-width: 240px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .venmo-qr .placeholder {
-      width: 240px;
-      height: 240px;
-      background: #eee;
-      border: 2px dashed #ccc;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #999;
-      font-size: 0.95rem;
-      margin: 0 auto;
-    }
-
-    .venmo-qr p {
-      margin-top: 15px;
-      font-weight: bold;
-      color: var(--primary);
-      font-size: 1rem;
-    }
-
     /* Footer */
     footer {
       text-align: center;
@@ -198,9 +168,8 @@
 
     /* Responsive */
     @media (max-width: 600px) {
-      .hero h1 { font-size: 2.2rem; }
-      .hero p { font-size: 1.1rem; }
-      .buy-now h2 { font-size: 1.8rem; }
+      .order-hero h1 { font-size: 2.2rem; }
+      .order-hero .tagline { font-size: 1.1rem; }
       .logo svg { height: 36px; }
     }
   </style>
@@ -225,17 +194,22 @@
       </svg>
     </a>
     <div class="nav-links">
-      <a href="#">Shop</a>
+      <a href="#order">Order</a>
       <a href="#quality">Our Quality</a>
-      <a href="#buy">Buy Now</a>
     </div>
   </nav>
 
-  <header class="hero">
-    <h1>Better Boards. Better Bites.</h1>
-    <p>Hand-finished, superior quality boards for the modern home chef.</p>
-    <a href="#buy" class="cta-btn">Buy Now</a>
-  </header>
+  <section id="order" class="order-hero">
+    <h1>Order Your Board</h1>
+    <p class="tagline">Better Boards. Better Bites.</p>
+    <p class="instructions">Scan the QR code or tap the button below to pay via Venmo. Include your board selection and shipping details in the payment note and we'll get it shipped out.</p>
+    <div class="venmo-qr">
+      <img src="venmo-qr.png" alt="Scan to pay with Venmo">
+      <p>Scan to Pay</p>
+    </div>
+    <br>
+    <a href="https://venmo.com/u/Eli-Belits" target="_blank" rel="noopener" class="cta-btn" style="margin-top: 25px;">Pay on Venmo</a>
+  </section>
 
   <section id="quality" class="features">
     <div class="feature-card">
@@ -255,16 +229,6 @@
   <section class="trend-banner">
     <h2>Pioneering the Non-Toxic Kitchen</h2>
     <p>In 2026, health is our priority. We are following the industry shift toward <strong>PFAS-free cutting boards</strong>, specializing in high-performance food-safe resin and wood charcuterie and cutting boards.</p>
-  </section>
-
-  <section id="buy" class="buy-now">
-    <h2>Order Your Board</h2>
-    <p>Pay via Venmo to place your order. Include your board selection and shipping details in the payment note and we'll get it shipped out.</p>
-    <div class="venmo-qr">
-      <img src="venmo-qr.png" alt="Scan to pay with Venmo">
-      <p>Pay with Venmo</p>
-    </div>
-    <a href="https://venmo.com/u/Eli-Belits" target="_blank" rel="noopener" class="cta-btn" style="margin-top: 25px;">Pay on Venmo</a>
   </section>
 
   <footer>
