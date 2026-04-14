@@ -40,7 +40,7 @@
       text-decoration: none;
     }
 
-    .logo svg {
+    .logo img {
       height: 50px;
       width: auto;
       margin-right: 10px;
@@ -170,7 +170,7 @@
     @media (max-width: 600px) {
       .order-hero h1 { font-size: 2.2rem; }
       .order-hero .tagline { font-size: 1.1rem; }
-      .logo svg { height: 36px; }
+      .logo img { height: 36px; }
     }
   </style>
 </head>
@@ -178,20 +178,7 @@
 
   <nav>
     <a href="#" class="logo">
-      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="rings" width="10" height="10" patternUnits="userSpaceOnUse">
-            <circle cx="5" cy="5" r="4" fill="none" stroke="#6b4a2b" stroke-width="1"/>
-          </pattern>
-        </defs>
-        <circle cx="140" cy="150" r="100" fill="url(#rings)" />
-        <path d="M140,50 L200,50 Q260,50 260,110 L260,190 Q260,250 200,250 L140,250 Z"
-              fill="none" stroke="#1a1a1a" stroke-width="3"/>
-        <line x1="100" y1="150" x2="260" y2="150" stroke="#6b4a2b" stroke-width="3"/>
-        <line x1="100" y1="165" x2="260" y2="165" stroke="#6b4a2b" stroke-width="3"/>
-        <text x="150" y="145" text-anchor="middle" font-family="Arial, sans-serif"
-              font-size="28" fill="#111" font-weight="600" letter-spacing="2">SHORELINE</text>
-      </svg>
+      <img src="shorelinelogo.png" alt="Shoreline Logo">
     </a>
     <div class="nav-links">
       <a href="#order">Order</a>
